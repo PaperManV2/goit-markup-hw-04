@@ -101,7 +101,7 @@ body {
   font-size: 0.875rem;
 }
 .bigAD {
-  background-color: var(--background-color-dark);
+  background-image: url(https://cdn.discordapp.com/attachments/1043879144578093066/1050832539666894988/employeeBackground.jpg);
   height: 600px;
   display: flex;
   justify-content: center;
