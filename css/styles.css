@@ -1,5 +1,5 @@
 :root {
-  --footer-Studio-text-color: #ffffff;
+  --footer-Studio-text-color: rgb(255, 255, 255);
   --body-font-color: #212121;
   --blue-text: #2196f3;
   --gray-text: #757575;
@@ -7,6 +7,8 @@
   --portfolio-gallery-border-color: #eeeeee;
   --crue-gallery-color: #f5f4fa;
   --line-color: #ececec;
+  --social-media-color: #afb1b8;
+  --social-media-icons-color: rgba(255, 255, 255, 0.1);
 }
 
 * {
@@ -27,12 +29,6 @@ body {
   color: var(--body-font-color);
 }
 
-.footer {
-  background-color: var(--background-color-dark);
-  color: var(--footer-Studio-text-color);
-  height: 252px;
-}
-
 .blueText {
   color: var(--blue-text);
 }
@@ -49,6 +45,7 @@ body {
 .blueTextOnHover:focus {
   color: var(--blue-text);
   opacity: 100%;
+  fill: currentColor;
 }
 
 .btnChangeOnHover {
@@ -97,13 +94,39 @@ body {
 
 .contactHeader {
   color: var(--gray-text);
+  fill: currentColor;
   font-weight: 400;
   font-size: 0.875rem;
+  height: 12px;
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
+
+.contact {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
 .bigAD {
-  background-image: url(https://cdn.discordapp.com/attachments/1043879144578093066/1050832539666894988/employeeBackground.jpg);
+  background-image: url(../images/bigAddBackground/Img.jpg);
   height: 600px;
   display: flex;
+  width: 1600px;
+  background-repeat: no-repeat;
+  background-position: center;
+  justify-content: center;
+  align-items: center;
+}
+
+.imgOverlay {
+  position: absolute;
+  background: rgba(47, 48, 58, 0.4);
+  width: 1600px;
+  height: 600px;
+  display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
 }
@@ -170,7 +193,7 @@ body {
   padding: 0px;
 }
 
-.photoGallery .galleriesTitle {
+.galleriesTitle {
   font-weight: 700;
   font-size: 2.25rem;
 }
@@ -178,11 +201,13 @@ body {
 .photoGalleryOfCrue {
   background-color: var(--crue-gallery-color);
   height: 648px;
+  width: 99vw;
   display: flex;
   flex-direction: column;
   gap: 50px;
   align-items: center;
   justify-content: center;
+  padding-bottom: 94px;
 }
 
 .photoGalleryOfCrue .listOfCruePhotos {
@@ -195,14 +220,9 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 368px;
+  height: 428px;
   gap: 30px;
   padding-bottom: 30px;
-}
-
-.photoGalleryOfCrue .galleriesTitle {
-  font-weight: 700;
-  font-size: 2.25rem;
 }
 
 .photoGalleryOfCrue .listItemProps .cruePictureDescriptionProps {
@@ -277,26 +297,35 @@ body {
   padding: 0px;
 }
 
-.phoneNumberAlignment {
-  margin-left: 50px;
-  margin-right: 227px;
-  padding: 0px;
-}
-
 .main {
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .teamPros {
   width: 1170px;
-  height: 101px;
+  height: 251px;
   padding: 94px 215px 94px 215px;
   margin: 0 auto;
 }
 
 .teamPros .listItemProps {
   width: 260px;
-  height: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.teamPros .listItemProps .companyLogos {
+  height: 120px;
+  width: 270px;
+  background-color: var(--crue-gallery-color);
+  border-radius: 5px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .teamPros .listOfTeamPros {
@@ -305,12 +334,46 @@ body {
   gap: 30px;
 }
 
-.footer .container {
+.footer {
+  background-color: var(--background-color-dark);
+  color: var(--footer-Studio-text-color);
+  height: 252px;
+  display: flex;
+  gap: 70px;
+  padding-left: 365px;
+}
+
+.footer div {
   display: flex;
   flex-direction: column;
   padding-top: 60px;
   padding-bottom: 60px;
   gap: 20px;
+}
+
+.footer .socialmedia {
+  display: flex;
+  flex-direction: row;
+  gap: 10px;
+}
+
+.footer .socialmedia .iconBackground {
+  background-color: var(--social-media-icons-color);
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.footer .socialmedia svg {
+  fill: var(--footer-Studio-text-color);
+}
+
+.footer .iconBackground:hover {
+  background-color: var(--blue-text);
 }
 
 .address {
@@ -319,6 +382,22 @@ body {
   justify-content: space-between;
   height: 81px;
 }
+
+.address a {
+  width: 120px;
+  height: 17px;
+}
+
+.joinUsText {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 16px;
+  letter-spacing: 0.03em;
+  padding-top: 12px;
+}
+
 .listOfCategoryBtns {
   display: flex;
   gap: 8px;
@@ -382,4 +461,55 @@ body {
   margin-bottom: 20px;
   width: 322px;
   height: 70px;
+}
+
+.photoGalleryOfCrue .socialmedia {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+.photoGalleryOfCrue .iconBackground {
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+}
+
+.photoGalleryOfCrue .iconBackground svg {
+  fill: var(--social-media-color);
+}
+
+.photoGalleryOfCrue .iconBackground:hover {
+  background-color: var(--blue-text);
+}
+
+.photoGalleryOfCrue .iconBackground:hover svg,
+.photoGalleryOfCrue .iconBackground:focus svg {
+  fill: var(--footer-Studio-text-color);
+}
+
+.ourCustomers {
+  height: 372px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+}
+
+.companyLogosContainer {
+  display: flex;
+  gap: 30px;
+}
+
+.companyLogosContainer div svg {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: solid 1px var(--social-media-color);
+  border-radius: 4px;
+  fill: var(--social-media-color);
 }
