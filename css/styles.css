@@ -372,7 +372,8 @@ body {
   fill: var(--footer-Studio-text-color);
 }
 
-.footer .iconBackground:hover {
+.footer .iconBackground:hover,
+.footer .iconBackground:focus {
   background-color: var(--blue-text);
 }
 
@@ -445,6 +446,12 @@ body {
   height: 404px;
 }
 
+.container .portfolioGalleryItems:hover,
+.container button:hover,
+.container button:focus {
+  box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
+}
+
 .line {
   width: auto;
   height: 0px;
@@ -482,7 +489,8 @@ body {
   fill: var(--social-media-color);
 }
 
-.photoGalleryOfCrue .iconBackground:hover {
+.photoGalleryOfCrue .iconBackground:hover,
+.photoGalleryOfCrue .iconBackground:focus {
   background-color: var(--blue-text);
 }
 
@@ -512,4 +520,10 @@ body {
   border: solid 1px var(--social-media-color);
   border-radius: 4px;
   fill: var(--social-media-color);
+}
+
+.companyLogosContainer div svg:focus,
+.companyLogosContainer div svg:hover {
+  fill: var(--blue-text);
+  border-color: var(--blue-text);
 }
