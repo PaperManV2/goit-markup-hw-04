@@ -13,7 +13,6 @@
 
 * {
   margin: 0;
-  padding: 9;
 }
 
 a {
@@ -111,13 +110,7 @@ body {
 
 .bigAD {
   background-color: var(--background-color-dark);
-  background: linear-gradient(#2f303a, #2f303a);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 99vw;
-}
-.mainPicture {
+  background: linear-gradient(#2f303a40, #2f303a40);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -127,7 +120,6 @@ body {
   background-position: center;
   width: 1600px;
 }
-
 .bigAD .bigADBtn {
   width: 200px;
   height: 50px;
@@ -284,6 +276,10 @@ body {
   margin: 0 auto;
 }
 
+.navContainer {
+  color: var(--body-font-color);
+}
+
 .navContainer .listOfNavBtns {
   display: flex;
   gap: 46px;
@@ -338,13 +334,14 @@ body {
   display: flex;
   gap: 70px;
   padding-left: 365px;
-}
-
-.footer div {
-  display: flex;
-  flex-direction: column;
   padding-top: 60px;
   padding-bottom: 60px;
+}
+
+.footer .socialmediaContainer,
+.footer .mainFooterInfo {
+  display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
@@ -365,7 +362,7 @@ body {
   cursor: pointer;
 }
 
-.footer .socialmedia svg {
+.footer .socialmedia .svg {
   fill: var(--footer-Studio-text-color);
 }
 
@@ -381,7 +378,7 @@ body {
   height: 81px;
 }
 
-.address a {
+.address .aLink {
   width: 120px;
   height: 17px;
 }
@@ -444,8 +441,8 @@ body {
 }
 
 .container .portfolioGalleryItems:hover,
-.container button:hover,
-.container button:focus {
+.listOfCategoryBtns .btnChangeOnHover:hover,
+.listOfCategoryBtns .btnChangeOnHover:focus {
   box-shadow: 3px 3px 3px 0px rgba(0, 0, 0, 0.2);
 }
 
@@ -482,7 +479,7 @@ body {
   cursor: pointer;
 }
 
-.photoGalleryOfCrue .iconBackground svg {
+.photoGalleryOfCrue .iconBackground .svg {
   fill: var(--social-media-color);
 }
 
@@ -491,8 +488,8 @@ body {
   background-color: var(--blue-text);
 }
 
-.photoGalleryOfCrue .iconBackground:hover svg,
-.photoGalleryOfCrue .iconBackground:focus svg {
+.photoGalleryOfCrue .iconBackground:hover .svg,
+.photoGalleryOfCrue .iconBackground:focus .svg {
   fill: var(--footer-Studio-text-color);
 }
 
@@ -510,7 +507,7 @@ body {
   gap: 30px;
 }
 
-.companyLogosContainer div svg {
+.companyLogosContainer .listItemProps .svg {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -519,8 +516,8 @@ body {
   fill: var(--social-media-color);
 }
 
-.companyLogosContainer div svg:focus,
-.companyLogosContainer div svg:hover {
+.companyLogosContainer .listItemProps .svg:focus,
+.companyLogosContainer .listItemProps .svg:hover {
   fill: var(--blue-text);
   border-color: var(--blue-text);
 }
