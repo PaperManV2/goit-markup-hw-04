@@ -110,25 +110,22 @@ body {
 }
 
 .bigAD {
+  background-color: var(--background-color-dark);
+  background: linear-gradient(#2f303a, #2f303a);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99vw;
+}
+.mainPicture {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-image: url(../images/bigAddBackground/Img.jpg);
   height: 600px;
-  display: flex;
-  width: 1600px;
   background-repeat: no-repeat;
   background-position: center;
-  justify-content: center;
-  align-items: center;
-}
-
-.imgOverlay {
-  position: absolute;
-  background: rgba(47, 48, 58, 0.4);
   width: 1600px;
-  height: 600px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
 }
 
 .bigAD .bigADBtn {
